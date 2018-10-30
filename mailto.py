@@ -45,7 +45,8 @@ if __name__ == "__main__":
             description=
             'A script used for sending email via SMTP.'
             )
-    parser.add_argument('-c', '--config', default='config.json')
+    parser.add_argument('-c', '--config',
+            default=sys.path[0] + '/config.json')
     parser.add_argument('-t', '--to', action='append')
     parser.add_argument('-s', '--subject')
     parser.add_argument('-b', '--body')
